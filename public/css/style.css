@@ -1,0 +1,238 @@
+:root {
+  --mainColor: #6c6262;
+  --secondaryColor: #fffcfc;
+  --infoColor: #77a9fe;
+/*  --infoColorDarker: #4b5f9a;*/
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #fffcfc;
+  color: #09063D ;
+
+}
+/* Flash messages*/
+.alert{
+  text-align: center;
+  padding: 1rem;
+}
+.success{
+  background-color: #dafaca;
+  color: #6da870;
+}
+.danger{
+  background-color: #fad4d4;
+  color: #c48487;
+}
+
+
+/*Input section*/
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.addTaskInput{
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border: 2px solid var(--mainColor);
+  border-radius: 5px;
+}
+.addTaskInputName:focus, .addTaskInputDate:focus{
+  outline: none;
+  border: 2px solid var(--mainColor);
+}
+.form{
+  display: flex;
+  gap: 1rem;
+  min-width: 40vw;
+}
+.addTaskInputName{
+  flex-grow: 1;
+}
+.addTaskInputDate{
+  flex-grow: 1;
+}
+.btnAdd{
+  background-color: #09063D ;
+  color: var(--secondaryColor);
+  border: none;;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem  1.5rem 0.5rem 1.5rem;
+}
+.btnAdd, .formBtn, .clearListBtn{
+  cursor: pointer;  
+}
+.noActiveTodoH4{
+  text-align: center;
+}
+
+/*Task Section*/
+.taskContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.taskListUl{
+  padding:0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.listItem:nth-child(n+2){
+  border-bottom: solid 1px #cebaba;
+}
+.taskListH{
+  text-align: center;
+  padding: 1rem;
+}
+.taskList{
+  background-color: #f9f9f9;
+}
+.listItem{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+}
+.taskText, .timeLeft{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.taskText{
+  margin-right: 1rem;
+
+}
+.timeLeft{
+/*  display: flex;*/
+    margin-left: auto;
+    padding: 0.25rem;
+    width: 12vw;
+    text-align: center;
+    border-radius: 2px;
+}
+.listItemBtns{
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-left: 3rem;
+}
+.formBtn{
+  background-color: none;
+  border: none;
+}
+.editBtn, .deleteBtn, .doneBtn{
+  padding: 0.2rem;
+  border-radius: 2px;
+  color: white;
+} 
+.editBtn{
+  background-color: #f0ff9e;
+  color: var(--mainColor);
+}
+.deleteBtn{
+  background-color: #ff6379;
+ 
+}
+.doneBtn{
+  background-color: #79d998;
+}
+.timeRemaining{
+  display: none;
+}
+.dates{
+  display: none;
+}
+.displayBlock{
+  display:block;
+}
+.displayNone{
+  display:none;
+}
+.bgColorDanger{
+  background-color: #fad4d4;
+  color: #c48487;
+}
+.bgColorWarning{
+  background-color: #ffe7a3;
+  color: #baa979;
+}
+.bgColorSuccess{
+  background-color: #dafaca;
+  color: #6da870;
+}
+/*Completed Tasks*/
+.completedTaskList{
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+.finishedTaskListH{
+  text-align: center;
+  padding: 1.5rem;
+}
+.clearForm{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.clearListBtn{
+  padding: 0.5rem;
+  background-color: #ffe7e7;
+  border-radius: 5px;
+  border: 1px solid #eab9b9;
+  color: #bf4949;
+}
+.taskItemFin{
+  list-style: none;
+  text-align: center;
+}
+.listItemF{
+  padding: 0.25rem;
+}
+/*  Add ToDo validation errors*/
+.addTaskMsg{
+  background-color: #ffe0e0;
+  padding: 1rem 3rem 1rem 3rem;
+  margin-top: 2rem;
+  border-radius: 3px;
+}
+
+
+@media screen and (max-width: 550px){
+  .form{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .taskList{
+    width: 100%;
+  }
+  .timeLeft{
+    width: 18vw;
+  }
+
+}
+@media screen and (max-width: 769px){
+  .taskListUl{
+    padding:0 0.5rem 0.5rem 0.5rem;
+  }
+  .taskList{
+    font-size: 0.75rem;
+    width: 90%
+  }
+  .timeLeft{
+    width: 16w;
+  }
+  .listItem{
+    font-size: 0.55rem;
+  }
+  .listItemBtns{
+    margin-left: 1rem;
+  }
+}

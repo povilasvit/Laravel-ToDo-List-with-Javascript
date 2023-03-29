@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
+.main{
+	min-height: 100vh;
+	background: rgb(242,245,251);
+	background: linear-gradient(171deg, rgba(242,245,251,1) 40%, rgba(201,194,194,1) 100%);
+	color: #34334b;
+	font-family: font-family: 'Roboto Slab', serif;
+}
+.container{
+}
+.containerInfo{	
+	display: flex;
+	padding-top: 1rem;	
+}
+.leftSection{
+	width: 40%;
+	transform: translateX(2rem);
+}
+.rightSection{
+	width: 60%;
+	margin-top: 2rem;
+}
+.leftSection, .rightSection{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.myPhoto{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	height: 10rem;
+	width: 10rem;
+	background-color: coral;
+	overflow: hidden;
+	border-radius: 50%;	
+	overflow: hidden;
+	border: #0a0859 1px solid;
+}
+.myPhotoImg{
+	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+ 	width: 100%;
+}
+.myName{
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+.myNameH3{
+	color: #34334b;
+	font-family: font-family: 'Roboto Slab', serif;
+	letter-spacing: 0.75rem;
+}
+.coll{
+	width: 60%;
+	margin-bottom: 1rem;
+	background-color: #efe4e4;
+	font-size: 0.75rem;
+}
+.sectionCollapsible{
+	text-align: center;	
+	padding: 0.75rem;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
+.activeColl, .sectionCollapsible:hover{
+	background-color:  #cdc9c9;
+}
+.collapsibleContent, .sectionCollapsible{
+	border-radius: 3px;
+	border: #d5cdcd solid 1px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.collapsibleContent{
+	padding: 1rem;
+	display: none;
+	background-color: #f1f1f1;
+}
+.cont{
+	display: block;
+}
+th, td{
+	padding: 0.5rem;
+	text-align: center;
+}
+.tableEl{
+	text-align: right;
+}
+.tableW{
+	text-align: left;
+}
+
+.containerSlider{
+	width: 70%;
+}
+/*swiper*/
+.swiper {
+    width: 85%;
+    padding: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+.slide1{
+	background-color: yellow;
+	min-height: 200px;
+}
+@media screen and (max-width: 769px){
+	.leftSection{
+		transform: translateX(10rem);
+	}
+}
+@media screen and (max-width: 1614px){
+	.leftSection{
+		transform: translateX(4rem);
+	}
+}
+@media screen and (max-width: 1300px){
+	.leftSection{
+		transform: translateX(5rem);
+	}
+}
+@media screen and (max-width: 1150px){
+	.leftSection{
+		transform: translateX(6rem);
+	}
+}
+@media screen and (max-width: 950px){
+	.leftSection{
+		transform: translateX(7rem);
+	}
+}
+@media screen and (max-width: 850px){
+	.containerInfo{
+		flex-direction: column;
+		width: 100%;
+	}
+	.leftSection, .rightSection{
+		width: 100%;
+		transform: translateX(0);
+	}
+	.leftSection{
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+	}
+	.rightSection{
+		margin-bottom: 10rem;
+	}
+	.swiper{
+		padding: 0;
+		width: 90%;
+		padding-bottom: 5rem;
+	}
+	.slide1{
+		height: 80vh;
+		width: 90vw;
+	}
+}
